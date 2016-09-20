@@ -1,0 +1,11 @@
+#!/usr/bin/env sh
+# Small helper script that transform any top-level file prefixed with a dot
+# to a file prefixed with an underscore, e.g. .config -> _config
+
+echo ">> from dot to underscore"
+for file in $(ls -a | grep "^\."); do
+    if !(test "$file" == "." || test "$file" == ".."); then
+       # FIXME(vdemeester) this doesn't hande .a.folder.like.that
+       mv -v $file ${file//\./_}
+    fi
+done

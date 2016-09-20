@@ -1,0 +1,13 @@
+#!/usr/bin/env sh
+# Small helper script to clean sbr-*-config from common stuff that
+# we don't want in the package.
+
+set -e
+
+echo ">> cleaning stuff"
+# Remove .config where vcsh / mr store configuration/repository
+rm -vfR .config/mr
+# Remove .gitignore.d where vcsh stores the thing git should ignore
+rm -vR .gitignore.d
+# Remove the README.* if present
+rm -v README*
