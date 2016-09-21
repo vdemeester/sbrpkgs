@@ -15,7 +15,11 @@ installPhase() {
         fi
     done
     for file in *; do
-	cp -vR $file $out/nix-home/
+	if test "$file" == "bin"; then
+	    cp -vR $file $out
+	else
+	    cp -vR $file $out/nix-home/
+	fi
     done
 }
 
