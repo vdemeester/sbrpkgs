@@ -8,6 +8,10 @@ rec {
       inherit (pkgs) stdenv;
       sbr-config = sbr-config;
   };
+  sbr-scripts = import ./sbr-scripts {
+     inherit (pkgs) stdenv;
+     sbr-config = sbr-config;
+  };
   sbr-config = pkgs.callPackage ./sbr-config {
     fetchurl = pkgs.fetchurl;
     sbr-config-strip = sbr-config-strip;
