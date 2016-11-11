@@ -1,4 +1,3 @@
-#!/usr/bin/env sh
 # Small helper script that transform any top-level file prefixed with a dot
 # to a file prefixed with an underscore, e.g. .config -> _config
 
