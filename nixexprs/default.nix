@@ -4,6 +4,10 @@ let
   pkgs = import <nixpkgs> { inherit system; };
 in
 rec {
+  sbr-tmux-config = import ./sbr-tmux-config {
+      inherit (pkgs) stdenv;
+      sbr-config = sbr-config;
+  };
   sbr-i3-config = import ./sbr-i3-config {
       inherit (pkgs) stdenv;
       sbr-config = sbr-config;
