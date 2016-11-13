@@ -23,4 +23,7 @@ rec {
   sbr-config-strip = import ./sbr-config-strip {
     inherit (pkgs) stdenv;
   };
+  sbr-nix-home = import ./nix-home {
+    inherit (pkgs) stdenv;
+  };
 }
