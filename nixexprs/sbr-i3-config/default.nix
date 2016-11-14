@@ -1,8 +1,8 @@
 { stdenv, system ? builtins.currentSystem, sbr-config }:
 
 sbr-config rec {
-  url = https://github.com/vdemeester/i3-config/archive/v1.4.tar.gz;
-  sha256 = "12qy8m9jmfk4n7skcbc26xz8qps9q65wlzlhlwl0fyfxv907bpdr";
+  url = https://github.com/vdemeester/i3-config/archive/v1.4.1.tar.gz;
+  sha256 = "10clcgayfxj6q3pdy9x2sa1vdp3wgkl9gxrf3d09a9s30brda3lz";
   name = "sbr-i3-config-${version}";
-  version = "1.4";
+  version = "1.4.1";
 }
