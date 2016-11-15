@@ -25,7 +25,6 @@ buildGoPackage rec {
   meta = {
     description = "A build automation tool for Docker applications";
     homepage = https://dnephin.github.io/dobi/;
-    maintainers = with lib.maintainers; [ vdemeester ];
     license = lib.licenses.asl20;
   };
 }
