@@ -34,9 +34,9 @@ rec {
 
   # from nixpkgs
   dobi = import ./dobi {
-       inherit (pkgs) stdenv;
+       inherit (pkgs) stdenv lib buildGoPackage fetchFromGitHub;
   };
   vndr = import ./vndr {
-       inherit (pkgs) stdenv;
+       inherit (pkgs) stdenv lib buildGoPackage fetchFromGitHub;
   };
 }
