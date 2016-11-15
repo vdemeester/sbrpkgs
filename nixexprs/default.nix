@@ -31,4 +31,12 @@ rec {
   sbr-nix-home = import ./nix-home {
     inherit (pkgs) stdenv;
   };
+
+  # from nixpkgs
+  dobi = import ./dobi {
+       inherit (pkgs) stdenv;
+  };
+  vndr = import ./vndr {
+       inherit (pkgs) stdenv;
+  };
 }
