@@ -39,4 +39,7 @@ rec {
   vndr = import ./vndr {
        inherit (pkgs) stdenv lib buildGoPackage fetchFromGitHub;
   };
+  doctl = import ./doctl {
+       inherit (pkgs) stdenv buildGoPackage fetchFromGitHub;
+  };
 }
