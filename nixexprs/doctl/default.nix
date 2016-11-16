@@ -12,7 +12,7 @@ buildGoPackage rec {
         -X ${t}.Major=1
         -X ${t}.Minor=5
         -X ${t}.Patch=0
-        -X ${t}.Label=nixos
+        -X ${t}.Label=release
    '';
 
   src = fetchFromGitHub {
