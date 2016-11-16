@@ -6,6 +6,15 @@ buildGoPackage rec {
   rev = "66f10023539b5e0e27485a34048366ca1133872f";
   goPackagePath = "github.com/digitalocean/doctl";
 
+  excludedPackages = "cmd/doctl-gen-doc cmd/install-doctl cmd/release-doctl";
+  buildFlagsArray = let t = "${goPackagePath}"; in ''
+     -ldflags=
+        -X ${t}.Major=1
+        -X ${t}.Minor=5
+        -X ${t}.Patch=0
+        -X ${t}.Label=nixos
+   '';
+
   src = fetchFromGitHub {
     owner = "digitalocean";
     repo = "doctl";
