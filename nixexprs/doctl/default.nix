@@ -23,7 +23,7 @@ buildGoPackage rec {
   src = fetchFromGitHub {
     owner = "digitalocean";
     repo = "doctl";
-    rev = "${version}";
+    rev = "v${version}";
     sha256 = "0dk7l4b0ngqkwdlx8qgr99jzipyzazvkv7dybi75dnp725lwxkl2";
   };
 
