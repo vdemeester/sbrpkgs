@@ -6,12 +6,9 @@ buildGoPackage rec {
   major = "1";
   minor = "5";
   patch = "0";
-  rev = "66f10023539b5e0e27485a34048366ca1133872f";
   goPackagePath = "github.com/digitalocean/doctl";
 
-  excludedPackages = "\\("
-    + stdenv.lib.concatStringsSep "\\|" ([ "doctl-gen-doc" "install-doctl" "release-doctl" ])
-    + "\\)";
+  excludedPackages = ''\(doctl-gen-doc\|install-doctl\|release-doctl\)'';
   buildFlagsArray = let t = "${goPackagePath}"; in ''
      -ldflags=
         -X ${t}.Major=${major}
