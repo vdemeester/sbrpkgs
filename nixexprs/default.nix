@@ -42,10 +42,9 @@ rec {
   };
   skopeo = import ./skopeo {
     inherit (pkgs) stdenv lib buildGoPackage fetchFromGitHub gpgme;
-  }
+  };
   delve = import ./delve {
     inherit (pkgs) stdenv lib buildGoPackage fetchFromGitHub;
-  }
   };
   dobi = import ./dobi {
     inherit (pkgs) stdenv lib buildGoPackage fetchFromGitHub;
