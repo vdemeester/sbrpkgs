@@ -39,6 +39,12 @@ rec {
        go sqlite iproute bridge-utils devicemapper systemd
        btrfs-progs iptables e2fsprogs xz utillinux xfsprogs
        procps;
+  skopeo = import ./skopeo {
+    inherit (pkgs) stdenv lib buildGoPackage fetchFromGitHub gpgme;
+  }
+  delve = import ./delve {
+    inherit (pkgs) stdenv lib buildGoPackage fetchFromGitHub;
+  }
   };
   dobi = import ./dobi {
        inherit (pkgs) stdenv lib buildGoPackage fetchFromGitHub;
