@@ -33,6 +33,13 @@ rec {
   };
 
   # from nixpkgs
+  docker = import ./docker {
+       inherit (pkgs) stdenv lib fetchFromGitHub makeWrapper cmake pkgconfig
+       go-md2man libapparmor apparmor-parser libseccomp git
+       go sqlite iproute bridge-utils devicemapper systemd
+       btrfs-progs iptables e2fsprogs xz utillinux xfsprogs
+       procps;
+  };
   dobi = import ./dobi {
        inherit (pkgs) stdenv lib buildGoPackage fetchFromGitHub;
   };
