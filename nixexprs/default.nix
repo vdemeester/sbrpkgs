@@ -5,6 +5,10 @@ let
 in
 rec {
   # configuration
+  sbr-ssh-config = import ./sbr-ssh-config {
+    inherit (pkgs) stdenv;
+    sbr-config = sbr-config;
+  };
   sbr-go-config = import ./sbr-go-config {
     inherit (pkgs) stdenv;
     sbr-config = sbr-config;
