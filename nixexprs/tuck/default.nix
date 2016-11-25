@@ -2,7 +2,7 @@
 
 buildGoPackage rec {
   name = "tuck-${version}";
-  version = "0.1.0";
+  version = "0.1.1";
   rev = "v${version}";
 
   goPackagePath = "github.com/vdemeester/tuck";
@@ -11,7 +11,7 @@ buildGoPackage rec {
     inherit rev;
     owner = "vdemeester";
     repo = "tuck";
-    sha256 = "14zjli0yqcvx1s60g1zi93sfnwm2pmj6pibi4zs7vz55y9qgibij";
+    sha256 = "1wwwh6wq5z0xdix2pdxh6i72f5w8qyc8rsc29b50vl00z869igv8";
   };
 
   meta = {
