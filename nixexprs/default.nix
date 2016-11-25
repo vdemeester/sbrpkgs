@@ -5,6 +5,10 @@ let
 in
 rec {
   # configuration
+  sbr-emacs-config = import ./sbr-emacs-config {
+    inherit (pkgs) stdenv;
+    sbr-config = sbr-config;
+  };
   sbr-git-config = import ./sbr-git-config {
     inherit (pkgs) stdenv;
     sbr-config = sbr-config;
