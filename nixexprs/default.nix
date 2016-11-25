@@ -32,6 +32,11 @@ rec {
     inherit (pkgs) stdenv;
   };
 
+  # Maybe in nixpkgs at some point
+  clasp = import ./clasp {
+    inherit (pkgs) stdenv lib buildGoPackage fetchFromGitHub;
+  };
+  
   # from nixpkgs
   docker = import ./docker {
     inherit (pkgs) stdenv lib fetchFromGitHub makeWrapper cmake pkgconfig
