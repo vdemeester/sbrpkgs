@@ -67,6 +67,9 @@ rec {
   delve = import ./delve {
     inherit (pkgs) stdenv lib buildGoPackage fetchFromGitHub;
   };
+  tuck = import ./tuck {
+    inherit (pkgs) stdenv lib buildGoPackage fetchFromGitHub;
+  };
   dobi = import ./dobi {
     inherit (pkgs) stdenv lib buildGoPackage fetchFromGitHub;
   };
