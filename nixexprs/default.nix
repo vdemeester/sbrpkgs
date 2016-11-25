@@ -5,6 +5,10 @@ let
 in
 rec {
   # configuration
+  sbr-git-config = import ./sbr-git-config {
+    inherit (pkgs) stdenv;
+    sbr-config = sbr-config;
+  };
   sbr-sh-config = import ./sbr-sh-config {
     inherit (pkgs) stdenv;
     sbr-config = sbr-config;
