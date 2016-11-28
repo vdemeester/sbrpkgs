@@ -6,8 +6,8 @@ in
 }:
 
 stdenv.mkDerivation {
-  inherit name;
-
+  configName = name;
+  name = "${name}-${version}";
   src = fetchurl {
     url = url;
     sha256 = sha256;

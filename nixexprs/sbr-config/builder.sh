@@ -6,19 +6,19 @@ buildPhase() {
 }
 
 installPhase() {
-    mkdir -p $out/nix-home/$name
-    chmod +rx $out/nix-home/$name
+    mkdir -p $out/nix-home/$configName
+    chmod +rx $out/nix-home/$configName
     sh sbr-config-underscore-to-dot
     for file in .*; do
         if !(test "$file" == "." || test "$file" == ".."); then
-            cp -vR $file $out/nix-home/$name
+            cp -vR $file $out/nix-home/$configName
         fi
     done
     for file in *; do
 	if test "$file" == "bin"; then
 	    cp -vR $file $out
 	else
-	    cp -vR $file $out/nix-home/$name
+	    cp -vR $file $out/nix-home/$configName
 	fi
     done
 }
