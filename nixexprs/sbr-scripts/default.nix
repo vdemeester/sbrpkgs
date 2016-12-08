@@ -2,7 +2,7 @@
 
 sbr-config rec {
   url = "https://github.com/vdemeester/scripts/archive/v${version}.tar.gz";
-  sha256 = "8e0e4cbf297984c877a03ee17e463ca40a24b51c69014c60d30daec66884042c";
+  sha256 = "1xz12ll9dkzr4q2rrgq2mmsqny57qsdyggqkphiczfqfxyyqmyyb";
   name = "sbr-scripts";
-  version = "1.0";
+  version = "1.1";
 }
