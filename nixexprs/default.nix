@@ -69,12 +69,6 @@ rec {
   tini = import ./tini {
     inherit (pkgs) stdenv fetchFromGitHub cmake glibc;
   };
-  skopeo = import ./skopeo {
-    inherit (pkgs) stdenv lib buildGoPackage fetchFromGitHub gpgme;
-  };
-  delve = import ./delve {
-    inherit (pkgs) stdenv lib buildGoPackage fetchFromGitHub;
-  };
   tuck = import ./tuck {
     inherit (pkgs) stdenv lib buildGoPackage fetchFromGitHub;
   };
@@ -83,8 +77,5 @@ rec {
   };
   vndr = import ./vndr {
     inherit (pkgs) stdenv lib buildGoPackage fetchFromGitHub;
-  };
-  doctl = import ./doctl {
-    inherit (pkgs) stdenv buildGoPackage fetchFromGitHub;
   };
 }
