@@ -1,4 +1,4 @@
 source $stdenv/setup
 
-mkdir -p $out/nix-home/.nixpkgs
-cp $src/config.nix $out/nix-home/.nixpkgs/
+mkdir -p $out/nix-home/sbr-nix-config/.nixpkgs
+cp $src/config.nix $out/nix-home/sbr-nix-config/.nixpkgs/
