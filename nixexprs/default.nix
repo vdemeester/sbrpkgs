@@ -5,6 +5,9 @@ let
 in
 rec {
   # configuration
+  sbr-nix-config = import ./sbr-nix-config {
+    inherit (pkgs) stdenv;
+  };
   sbr-ssh-config = import ./sbr-ssh-config {
     inherit (pkgs) stdenv;
     sbr-config = sbr-config;
