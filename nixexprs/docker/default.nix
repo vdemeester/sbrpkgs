@@ -11,13 +11,13 @@ with lib;
 
 stdenv.mkDerivation rec {
   name = "docker-${version}";
-  version = "1.13.0-rc3";
+  version = "1.13.0-rc4";
 
   src = fetchFromGitHub {
     owner = "docker";
     repo = "docker";
     rev = "v${version}";
-    sha256 = "01g6ahks5csxmq7ir1ng8z6722arqh5spmasdcc6djjr8g1lw8yh";
+    sha256 = "0ql5qz8fbzk3myxkh0skcmjp25nf91righwf736bhl0gng3j9k61";
   };
 
   docker-runc = overrideDerivation runc (deriv: {
