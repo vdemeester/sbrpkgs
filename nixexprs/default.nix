@@ -36,6 +36,10 @@ rec {
     inherit (pkgs) stdenv;
     sbr-config = sbr-config;
   };
+  sbr-xorg-config = import ./sbr-xorg-config {
+    inherit (pkgs) stdenv;
+    sbr-config = sbr-config;
+  };
   sbr-scripts = import ./sbr-scripts {
     inherit (pkgs) stdenv;
     sbr-config = sbr-config;
