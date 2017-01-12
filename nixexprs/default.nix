@@ -82,7 +82,4 @@ rec {
   dobi = import ./dobi {
     inherit (pkgs) stdenv lib buildGoPackage fetchFromGitHub;
   };
-  vndr = import ./vndr {
-    inherit (pkgs) stdenv lib buildGoPackage fetchFromGitHub;
-  };
 }
