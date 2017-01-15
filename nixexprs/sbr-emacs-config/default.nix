@@ -2,7 +2,7 @@
 
 sbr-config rec {
   url = "https://github.com/vdemeester/emacs-config/archive/v${version}.tar.gz";
-  sha256 = "1wvp4k5c67dj19f4y8lisgvq4h4nzwvr3228ryfp6v1ifc659d4m";
+  sha256 = "0d9gmgwszlaqrmkn35zq9db3n01lmw1l64r6a6igzkbf1kqcnxwx";
   name = "sbr-emacs-config";
-  version = "0.2.1";
+  version = "0.2.2";
 }
