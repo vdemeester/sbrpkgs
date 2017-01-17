@@ -11,25 +11,27 @@ with lib;
 
 stdenv.mkDerivation rec {
   name = "docker-${version}";
-  version = "1.13.0-rc4";
+  version = "1.13.0-rc6";
 
   src = fetchFromGitHub {
     owner = "docker";
     repo = "docker";
     rev = "v${version}";
-    sha256 = "0ql5qz8fbzk3myxkh0skcmjp25nf91righwf736bhl0gng3j9k61";
+    sha256 = "02jncfp6mb3zswz0w7frn64pap9zzx1cg1fp52xpg6z6hs9vc292";
   };
 
-  docker-runc = overrideDerivation runc (deriv: {
+  docker-runc = runc.overrideAttrs (oldAttrs: rec {
     name = "docker-runc";
     src = fetchFromGitHub {
       owner = "docker";
       repo = "runc";
-      rev = "51371867a01c467f08af739783b8beafc154c4d7";
-      sha256 = "1vyc6c59npwv8xyc1qynzz5i7kwnjgf5yda4avfnap8z4zn14m0x";
+      rev = "2f7393a47307a16f8cee44a37b262e8b81021e3e";
+      sha256 = "1s5nfnbinzmcnm8avhvsniz0ihxyva4w5qz1hzzyqdyr0w2scnbj";
     };
+    # docker/runc already include these patches / are not applicable
+    patches = [];
   });
-  docker-containerd = overrideDerivation containerd (deriv: {
+  docker-containerd = containerd.overrideAttrs (oldAttrs: rec {
     name = "docker-containerd";
     src = fetchFromGitHub {
       owner = "docker";
@@ -38,7 +40,7 @@ stdenv.mkDerivation rec {
       sha256 = "184sd9dwkcba3zhxnz9grw8p81x05977p36cif2dgkhjdhv12map";
     };
   });
-  docker-tini = overrideDerivation tini (deriv: {
+  docker-tini = tini.overrideAttrs  (oldAttrs: rec {
     name = "docker-init";
     src = fetchFromGitHub {
       owner = "krallin";
