@@ -40,7 +40,7 @@ rec {
     inherit (pkgs) stdenv;
     sbr-config = sbr-config;
   };
-  scripts = import ./sbr-scripts {
+  scripts = import ./scripts {
     inherit (pkgs) stdenv;
     sbr-config = sbr-config;
   };
