@@ -2,7 +2,7 @@
 
 sbr-config rec {
   url = "https://github.com/vdemeester/git-config/archive/v${version}.tar.gz";
-  sha256 = "17vbhp03x5agfnp0m7mm6qhk4k866karsn19vncnyj07ppxznm2g";
+  sha256 = "0qpc46aybs8xvyigdmgvn70pwfymvy66jg58sc4lc14frid265fh";
   name = "sbr-git-config";
-  version = "0.1.2";
+  version = "0.1.3";
 }
