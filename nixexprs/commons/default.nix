@@ -44,6 +44,9 @@ rec {
     inherit (pkgs) stdenv;
     sbr-config = sbr-config;
   };
+  ape-config = import ./ape-config {
+    inherit (pkgs) stdenv;
+  };
   sbr-config = pkgs.callPackage ./sbr-config {
     fetchurl = pkgs.fetchurl;
     sbr-config-strip = sbr-config-strip;
