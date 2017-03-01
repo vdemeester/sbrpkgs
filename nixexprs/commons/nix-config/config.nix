@@ -14,6 +14,7 @@
 				youtube-dl
 			];
 		};
+		# browsers
 		browsers = with pkgs; buildEnv {
 			name = "browsers";
 			paths = [
