@@ -10,3 +10,5 @@ rm -vfR .config/mr
 rm -vR .gitignore.d
 # Remove the README.* if present
 rm -v README*
+# Remove the Dockerfile(s) if present
+rm -v Dockerfile*
