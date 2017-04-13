@@ -15,7 +15,10 @@ rec {
     inherit (pkgs) stdenv lib buildGoPackage fetchFromGitHub;
   };
   
-  # from nixpkgs
+  # from/to nixpkgs
+  envbox = import ./envbox {
+    inherit (pkgs) stdenv lib buildGoPackage fetchFromGitHub;
+  };
   dobi = import ./dobi {
     inherit (pkgs) stdenv lib buildGoPackage fetchFromGitHub;
   };
