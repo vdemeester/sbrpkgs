@@ -1,4 +1,5 @@
 {
+	allowBroken = true; # mainly for.. being able to build stuff -_-
 	allowUnfree = true; # mainly for idea-ultimate and some other stuff
 	# PackageOverrides allows you to update stuff in a bunch and when you want
 	# - http://pastebin.com/waUNDPYw
