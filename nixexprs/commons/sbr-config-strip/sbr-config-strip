@@ -5,10 +5,10 @@ set -e
 
 echo ">> cleaning stuff"
 # Remove .config where vcsh / mr store configuration/repository
-rm -vfR .config/mr
+rm -vfR .config/mr || true
 # Remove .gitignore.d where vcsh stores the thing git should ignore
-rm -vR .gitignore.d
+rm -vR .gitignore.d || true
 # Remove the README.* if present
-rm -v README*
+rm -v README* || true
 # Remove the Dockerfile(s) if present
-rm -v Dockerfile*
+rm -v Dockerfile* || true
