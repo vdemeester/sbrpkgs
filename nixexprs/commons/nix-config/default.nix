@@ -2,7 +2,7 @@
 
 stdenv.mkDerivation rec {
   name = "sbr-nix-config-${version}";
-  version = "0.2";
+  version = "0.3";
   builder = ./builder.sh;
   src = ./.;
 }
