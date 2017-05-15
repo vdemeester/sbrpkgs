@@ -5,11 +5,6 @@
 	# - http://pastebin.com/waUNDPYw
 	# - https://nixos.org/wiki/Howto_keep_multiple_packages_up_to_date_at_onec
 	packageOverrides = pkgs_: with pkgs_; {  # pkgs_ is the original set of packages
-		haskellPackages = haskellPackages.override {
-			extension = self : super : {
-				cabal = pkgs.haskellPackages.cabalNoTest;
-			};
-		};
 		all = with pkgs; buildEnv {  # pkgs is your overriden set of packages itself
 			name = "all";
 			paths = [
