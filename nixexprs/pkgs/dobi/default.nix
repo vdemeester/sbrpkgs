@@ -2,8 +2,8 @@
 
 buildGoPackage rec {
   name = "dobi-${version}";
-  version = "v0.8";
-  rev = "1b5f0c4c7304b4b279581eac6d7f017a9a7d4f4e";
+  version = "v0.9";
+  rev = "0cb9d4c4290d8c044b34f1fb5c662ac4116c2f25";
 
   buildFlagsArray = let t = "${goPackagePath}/cmd"; in ''
     -ldflags=
@@ -17,7 +17,7 @@ buildGoPackage rec {
     inherit rev;
     owner = "dnephin";
     repo = "dobi";
-    sha256 = "0qhmbb172mkj4sifiapgscqq71fw3ccbh9ybyf7ihkysf94smkgk";
+    sha256 = "11a3nhhxcixz3sb92vr57gj5dpg4h47xy2v0wczxzcn1fhf2s06n";
   };
 
   goDeps = ./deps.nix;
