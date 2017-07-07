@@ -2,7 +2,7 @@
 
 sbr-config rec {
   url = "https://github.com/vdemeester/sh-config/archive/v${version}.tar.gz";
-  sha256 = "0rb7xj4n3izixpb1b5yxb0zfwg9s4p51han8yfagkjpbrak5rc25";
+  sha256 = "1j5vhw7bq6lhcvm9byqc480yi4g3bw2dfqvfby5506pg39rhh8z1";
   name = "sbr-sh-config";
-  version = "1.6";
+  version = "1.7";
 }
