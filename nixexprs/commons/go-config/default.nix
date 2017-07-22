@@ -2,7 +2,7 @@
 
 sbr-config rec {
   url = "https://github.com/vdemeester/go-config/archive/v${version}.tar.gz";
-  sha256 = "08f2k1zjj4mnhq1sn5hm3w1k9d3q42z6cg3nx4mqp1gjviw57z46";
+  sha256 = "1bb89cc88sqcnjcj66vcw08y2py2yd37xa85pnr7x453iagbm2q8";
   name = "sbr-go-config";
-  version = "0.5.0";
+  version = "0.5.1";
 }
