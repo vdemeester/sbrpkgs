@@ -9,7 +9,6 @@
 			name = "all";
 			paths = [
 				pandoc
-				dmenu2
 				jq
 				keybase
 				youtube-dl
