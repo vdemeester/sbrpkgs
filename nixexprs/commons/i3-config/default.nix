@@ -2,7 +2,7 @@
 
 sbr-config rec {
   url = "https://github.com/vdemeester/i3-config/archive/v${version}.tar.gz";
-  sha256 = "0080hrsgs1iyx07l2q9p7ag3z71a2sbjiwdg4flj8k3c7pc4yhfd";
+  sha256 = "1dxnszvgyfqlf3y69aa6gnbjzw21fri0xiv8iarrr4n8x97zaxcd";
   name = "sbr-i3-config";
-  version = "1.6.4";
+  version = "1.7.0";
 }
