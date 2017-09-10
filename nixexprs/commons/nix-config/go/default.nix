@@ -13,7 +13,7 @@ pkgs.stdenv.mkDerivation rec {
 	name = "go-projects";
 	env = pkgs.buildEnv { name = name; paths = buildInputs; };
 	buildInputs = [
-		pkgs.go_1_8
+		pkgs.go_1_9
 		pkgs.vndr
 		pkgs.gnumake
 		pkgs.glide
