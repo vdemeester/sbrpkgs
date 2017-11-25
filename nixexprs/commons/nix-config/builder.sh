@@ -7,8 +7,9 @@ mkdir -p $dest/.nixpkgs
 cp $src/config.nix $dest/.nixpkgs/
 
 # go package direnv/nix-shells
-GO_PACKAGES=(vdemeester docker containous kubernetes libkermit moby linuxkit opencontainers containerd google ldez gotestyourself)
+mkdir -p $dest/src/github.com
+cp $src/go/{.envrc,default.nix} $dest/src/github.com/
+GO_PACKAGES=(vdemeester docker containous kubernetes moby linuxkit opencontainers containerd google gotestyourself)
 for pkg in ${GO_PACKAGES[@]}; do
     mkdir -p $dest/src/github.com/${pkg}
-    cp $src/go/{.envrc,default.nix} $dest/src/github.com/${pkg}
 done
