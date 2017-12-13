@@ -41,7 +41,7 @@ in stdenv.mkDerivation rec {
 
           Consumers, having acquired the publisher's public key through a secure channel, can then communicate with any notary server or (insecure) mirror, relying only on the publisher's key to determine the validity and integrity of the received content.
         '';
-        license = licenses.apache2;
+        license = licenses.asl20;
         homepage = https://github.com/theupdateframework/notary;
         maintainers = with maintainers; [ vdemeester ];
         platforms = with platforms; unix;
