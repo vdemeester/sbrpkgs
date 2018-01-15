@@ -22,7 +22,4 @@ rec {
   dobi = import ./dobi {
     inherit (pkgs) stdenv lib buildGoPackage fetchFromGitHub;
   };
-  notary = import ./notary {
-    inherit (pkgs) stdenv fetchurl;
-  };
 }
