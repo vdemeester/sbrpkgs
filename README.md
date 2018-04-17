@@ -1,3 +1,5 @@
+**Archived (read-only) : I'm now using overlays and almost everything inlined in https://github.com/vdemeester/nixos-configuration**
+
 # sbrpkgs — personal nix packages
 
 In a terminal :
